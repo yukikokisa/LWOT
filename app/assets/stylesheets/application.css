@@ -13,3 +13,79 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+  box-sizing: border-box;
+}
+/*======================================================*/
+/*webページ全体*/
+/*======================================================*/
+body,
+html {
+  height: 100%;
+  background-color: #fffafa;
+  font-family: "Georgia", "游ゴシック", sans-serif;
+}
+
+/*======================================================*/
+/*ヘッダー*/
+/*======================================================*/
+header.header {
+  width: 100%;
+  background-color: #000080;
+}
+
+.header_bar.row {
+  height: 100px;
+  padding: 10px 40px;
+  position: relative;
+}
+
+.header_bar.row h1 {
+  font-size: 25px;
+  line-height: 20px;
+  float: left;
+  padding-top: 30px;
+}
+
+.header_bar.row h1.grid-1 a {
+  text-decoration: none;
+  color: #fafdff;
+}
+
+.user_nav.grid-1 {
+  float: right;
+  padding-top: 10px;
+}
+
+.btn,
+.user_nav.grid-1 a {
+  width: 120px;
+  padding: 8px 5px;
+  margin-left: 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #696969;
+  background-color: #fffafa;
+  transition: .4s;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*======================================================*/
+/*フッター*/
+/*======================================================*/
+footer {
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #000080;
+}
+
+footer p {
+  font-size: 15px;
+  color: #fffafa;
+  text-align: center;
+}
+
