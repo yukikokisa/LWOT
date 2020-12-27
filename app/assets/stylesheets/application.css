@@ -58,8 +58,7 @@ header.header {
   padding-top: 10px;
 }
 
-.btn,
-.user_nav.grid-1 a {
+.post {
   width: 120px;
   padding: 8px 5px;
   margin-left: 10px;
