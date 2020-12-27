@@ -7,6 +7,11 @@ class Patient < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
   validates :password, format: { with: VALID_PASSWORD_REGEX }
 
+  with_options presence: true do
+    validates :name,         length: { maximum: 10 }, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
+    validates :doctor,       format: { with: /\A[ぁ-んァ-ン一-龥]/ }
+    validates :room_number,  format: { with: /\A[0-9]+\z/ }
+  end
   
   def email_required?
     false

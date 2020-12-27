@@ -24,7 +24,7 @@
 .account-page .account-page__header h2:after {
   content: "";
   display: block;
-  width: 60px;
+  width: 100px;
   margin-top: 5px;
   border-bottom: 1px solid #38aef0;
 }
@@ -40,22 +40,15 @@
   font-size: 14px;
 }
 .account-page .field {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .account-page .field .field-label {
   padding: 10px 0;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 200;
 }
-.account-page .field .field-label i {
-  font-size: 11px;
-}
-.account-page .field .field-input input {
-  width: 100%;
-  padding: 10px;
-  letter-spacing: 1px;
-}
+
 .account-page .btn {
   display: inline-block;
   height: 50px;
@@ -65,12 +58,13 @@
   text-align: center;
   border: none;
   border-radius: 2px;
+  background-color: #38aef0;
 }
-.account-page input[type=submit] {
+.actions {
   float: left;
   margin-top: 20px;
   color: #fff;
-  background-color: #38aef0;
+  
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
