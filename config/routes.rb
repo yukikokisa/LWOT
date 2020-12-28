@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :nurses
   devise_for :patients
   get 'questions/index'
   root to: "questions#index"
