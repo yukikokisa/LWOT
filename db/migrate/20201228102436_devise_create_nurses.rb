@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-class DeviseCreatePatients < ActiveRecord::Migration[6.0]
+class DeviseCreateNurses < ActiveRecord::Migration[6.0]
   def change
-    create_table :patients do |t|
+    create_table :nurses do |t|
       ## Database authenticatable
       t.string :name,               null: false
-      t.string :doctor,             null: false
-      t.string :room_number,        null: false
+      t.string :employee_number,    null: false
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
@@ -38,9 +37,9 @@ class DeviseCreatePatients < ActiveRecord::Migration[6.0]
       t.timestamps null: false
     end
 
-    #add_index :patients, :room_number,          unique: true
-    add_index :patients, :reset_password_token, unique: true
-    # add_index :patients, :confirmation_token,   unique: true
-    # add_index :patients, :unlock_token,         unique: true
+    #add_index :nurses, :email,                unique: true
+    add_index :nurses, :reset_password_token, unique: true
+    # add_index :nurses, :confirmation_token,   unique: true
+    # add_index :nurses, :unlock_token,         unique: true
   end
 end

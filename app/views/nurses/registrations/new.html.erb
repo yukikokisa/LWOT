@@ -3,24 +3,19 @@
     <div class="account-page__inner--left account-page__header">
       <h2>Create Account</h2>
       <h5>新規アカウントの作成</h5>
-      <%= render "devise/shared/links" %>
+      <%= render "nurses/shared/links" %>
     </div>
     <div class="account-page__inner--right user-form">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-        <div class="field">
+        <%= render "nurses/shared/error_messages", resource: resource %>
+         <div class="field">
           <%= f.label :氏名 %><br />
           <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
         </div>
 
         <div class="field">
-          <%= f.label :主治医 %><br />
-          <%= f.text_field :doctor, autofocus: true, autocomplete: "doctor" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :部屋番号 %><br />
-          <%= f.text_field :room_number, autofocus: true, autocomplete: "room_number" %>
+          <%= f.label :社員番号 %><br />
+          <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number" %>
         </div>
 
         <div class="field">
@@ -39,8 +34,9 @@
         <div class="actions">
           <%= f.submit "Sign up" %>
         </div>
-      <% end %>
-    </div>
+        <% end %>
+     </div>
   </div>
 </div>
    
+        

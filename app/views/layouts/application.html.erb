@@ -18,8 +18,17 @@
             <%= link_to destroy_patient_session_path, method: :delete, class: "post" do %>
               ログアウト
             <% end %>
-            <%= link_to "#", class: "post" do %>
+            <%= link_to new_nurse_session_path, class: "post" do %>
               看護師様は<br>こちら
+            <% end %>
+          </div>
+        <% elsif nurse_signed_in? %>
+          <div class="user_nav grid-1">
+            <%= link_to new_patient_session_path, class: "post" do %>
+              患者様は<br>こちら
+            <% end %>
+            <%= link_to destroy_nurse_session_path, method: :delete, class: "post" do %>
+              ログアウト
             <% end %>
           </div>
         <% else %>
@@ -27,7 +36,7 @@
             <%= link_to new_patient_session_path, class: "post" do %>
               患者様は<br>こちら
             <% end %>
-             <%= link_to "#", class: "post" do %>
+             <%= link_to new_nurse_session_path, class: "post" do %>
               看護師様は<br>こちら
             <% end %>
         <% end %>
