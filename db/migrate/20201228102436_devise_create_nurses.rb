@@ -4,7 +4,8 @@ class DeviseCreateNurses < ActiveRecord::Migration[6.0]
   def change
     create_table :nurses do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
+      t.string :name,               null: false
+      t.string :employee_number,    null: false
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
@@ -36,7 +37,7 @@ class DeviseCreateNurses < ActiveRecord::Migration[6.0]
       t.timestamps null: false
     end
 
-    add_index :nurses, :email,                unique: true
+    #add_index :nurses, :email,                unique: true
     add_index :nurses, :reset_password_token, unique: true
     # add_index :nurses, :confirmation_token,   unique: true
     # add_index :nurses, :unlock_token,         unique: true
