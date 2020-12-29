@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-12-26T04:50:53.858Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.3 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="yc3uWIEpdVYNhOscIHbN" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-29T09:09:05.655Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.3 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="FKuy9Fd-U-MnCqMRYh7i" version="13.10.0" type="embed">
     <diagram id="jWqZOekPiA1CXMLEJWX6" name="ページ1">
-        <mxGraphModel dx="713" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#DAD2D8" math="0" shadow="1">
+        <mxGraphModel dx="924" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#DAD2D8" math="0" shadow="1">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -36,7 +36,7 @@
                 <mxCell id="48" value="questions" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=0;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
                     <mxGeometry x="504" y="400" width="160" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value=" - nurse_id&#10; - patient_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=middle;resizable=0;rotatable=0;part=1;fontColor=#143642;" parent="48" vertex="1">
+                <mxCell id="49" value=" - nurse_id&#10; - patient_id&#10; - symptom_id&#10; - medical_treatment_id&#10; - checkup_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=middle;resizable=0;rotatable=0;part=1;fontColor=#143642;" parent="48" vertex="1">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;startSize=26;endArrow=ERone;endFill=0;endSize=26;strokeColor=#0F8B8D;strokeWidth=3;fillColor=#FAE5C7;fontColor=#143642;" parent="1" source="50" target="49" edge="1">
