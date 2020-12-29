@@ -1,0 +1,2 @@
+class OnesetTime < ApplicationRecord
+end
