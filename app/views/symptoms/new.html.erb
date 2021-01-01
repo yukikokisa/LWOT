@@ -1,0 +1,24 @@
+<div class="checkup_contents">  
+  <div class="checkup_content_title">
+    <h2>下記のことについて教えてください。</h2>
+  </div>
+  <div class="checkup_content">
+   <%= form_with model: @symptom, local: true do |f| %>
+     <div class = "consultation_content">
+       <h3>１、いつから</h3>
+        <%= f.date_field :oneset_time, class: 'form-control'%>
+     </div>
+     <div class = "detail">
+        <h3>2、どこが</h3>
+        <%= f.text_field :body_region, class:"body_region", placeholder:"例）右足、左手中指" %>
+     </div>
+     <div class = "detail">
+        <h3>3、どんな風に</h3>
+        <%= f.text_area :condition, class:"detail", placeholder:"例）腫れている、赤くなっている" %>
+     </div>
+     <div class="checkup_content-submit">
+        <%= f.submit "投稿する" , class:"btn" %>
+     </div>
+   <% end %>
+  </div>
+</div>  
