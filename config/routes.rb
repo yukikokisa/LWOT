@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   root to: "questions#index"
   resources :questions, only: [:index, :new, :create]
   resources :checkups, only: [:new, :create]
+  resources :symptoms, only: [:new, :create]
 end
