@@ -7,7 +7,12 @@
         <%= link_to questions_path, method: :post, class: "post" do %>
               なし
         <% end %>
-        <a class="question-2" href="#">検査のついて</a>
+        <%= link_to new_checkup_path, class: "post" do %>
+              検査のついて
+        <% end %>
+          <%= link_to new_checkup_path, class: "post" do %>
+              症状について
+        <% end %>
         <a class="question-3" href="#">症状について</a>
         <a class="question-4" href="#">治療について</a>
      </ul>

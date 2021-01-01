@@ -1,2 +1,0 @@
-class OnesetTime < ApplicationRecord
-end

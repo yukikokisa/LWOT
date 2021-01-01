@@ -1,0 +1,18 @@
+<div class="checkup_contents">  
+  <div class="checkup_content_title">
+    <h2>相談したい内容にチェックを入れてください。</h2>
+  </div>
+  <div class="checkup_content">
+   <%= form_with model: @checkup, local: true do |f| %>
+     <div class = "consultation_content">
+        <%= f.collection_select(:consultation_content_id, ConsultationContent.all, :id, :name, {}, {class:"consultation_content_id"}) %>
+     </div>
+     <div class = "detail">
+        <%= f.text_area :detail, class:"detail", placeholder:"詳細" %>
+     </div>
+     <div class="checkup_content-submit">
+        <%= f.submit "投稿する" , class:"btn" %>
+     </div>
+   <% end %>
+  </div>
+</div>  
