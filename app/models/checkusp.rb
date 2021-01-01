@@ -1,2 +1,0 @@
-class Checkups < ApplicationRecord
-end
