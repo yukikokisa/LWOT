@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_29_095615) do
+ActiveRecord::Schema.define(version: 2021_01_02_023746) do
 
   create_table "checkups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "patient_id", null: false
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 2020_12_29_095615) do
     t.index ["reset_password_token"], name: "index_nurses_on_reset_password_token", unique: true
   end
 
+  create_table "patient_lists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "patient_id", null: false
+    t.bigint "nurse_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["nurse_id"], name: "index_patient_lists_on_nurse_id"
+    t.index ["patient_id"], name: "index_patient_lists_on_patient_id"
+  end
+
   create_table "patients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "doctor", null: false
@@ -57,17 +66,9 @@ ActiveRecord::Schema.define(version: 2020_12_29_095615) do
 
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "patient_id", null: false
-    t.bigint "nurse_id", null: false
-    t.bigint "medical_treatments_id"
-    t.bigint "symptoms_id"
-    t.bigint "checkup_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["checkup_id"], name: "index_questions_on_checkup_id"
-    t.index ["medical_treatments_id"], name: "index_questions_on_medical_treatments_id"
-    t.index ["nurse_id"], name: "index_questions_on_nurse_id"
     t.index ["patient_id"], name: "index_questions_on_patient_id"
-    t.index ["symptoms_id"], name: "index_questions_on_symptoms_id"
   end
 
   create_table "symptoms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -82,10 +83,8 @@ ActiveRecord::Schema.define(version: 2020_12_29_095615) do
 
   add_foreign_key "checkups", "patients"
   add_foreign_key "medical_treatments", "patients"
-  add_foreign_key "questions", "checkups"
-  add_foreign_key "questions", "medical_treatments", column: "medical_treatments_id"
-  add_foreign_key "questions", "nurses"
+  add_foreign_key "patient_lists", "nurses"
+  add_foreign_key "patient_lists", "patients"
   add_foreign_key "questions", "patients"
-  add_foreign_key "questions", "symptoms", column: "symptoms_id"
   add_foreign_key "symptoms", "patients"
 end

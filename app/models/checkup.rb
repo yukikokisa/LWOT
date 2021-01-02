@@ -1,5 +1,6 @@
 class Checkup < ApplicationRecord
   belongs_to :patient, optional: true
+  belongs_to :question, optional: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :consultation_content
