@@ -1,0 +1,18 @@
+<div class="medical_contents">  
+  <div class="medical_content_title">
+    <h2>相談したい内容にチェックを入れてください。</h2>
+  </div>
+  <div class="medical_content">
+   <%= form_with model: @medical_treatment, local: true do |f| %>
+     <div class = "consultation_content">
+        <%= f.collection_select(:treatment_content_id, TreatmentContent.all, :id, :name, {}, {class:"treatment_content_id"}) %>
+     </div>
+     <div class = "detail">
+        <%= f.text_area :text, class:"detail", placeholder:"相談内容詳細" %>
+     </div>
+     <div class="checkup_content-submit">
+        <%= f.submit "投稿する" , class:"btn" %>
+     </div>
+   <% end %>
+  </div>
+</div>  

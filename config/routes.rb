@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :new, :create]
   resources :checkups, only: [:new, :create]
   resources :symptoms, only: [:new, :create]
+  resources :medical_treatments, only: [:new, :create]
 end
+ 
