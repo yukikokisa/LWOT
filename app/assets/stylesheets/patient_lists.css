@@ -1,0 +1,64 @@
+.patient_list_contents {
+  display: flex;
+}
+
+.side_bar {
+  background-color: #FFFFFF;
+  width: 300px;
+  height: 100vh;
+}
+
+.v_line_fix {
+  width: 3px;
+  height: 100vh;
+  background-color: rgb(49, 39, 39);
+}
+
+.main {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
+.side-bar-header {
+  height: 100px;
+}
+
+.date {
+  font-size: 20px;
+}
+
+.patient_list_room {
+  background-color: #FFFFFF;
+  height: calc(100vh - 100px);
+}
+
+.patient_lists_title {
+  height: 50px;
+  background-color: #FFFFFF
+}
+
+.title-border {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF
+}
+.title-border:before,
+.title-border:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+.title-border:before {
+  margin-right: 1rem;
+}
+.title-border:after {
+  margin-left: 1rem;
+}
+
+  label, input[type='checkbox'] {
+    cursor: pointer;
+}
+
+label, input[type='button'] {
+  cursor: pointer;
+}

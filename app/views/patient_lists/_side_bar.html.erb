@@ -1,0 +1,25 @@
+<div class="side-bar-header">
+  <div class = "date"><%= @date %></div>
+</div>
+
+<div class="patient_list_room">
+   <div class="patient_lists">
+     <div class="title-border">
+       <h2>患者一覧</h2>
+     </div>
+     <div class="patient_list">
+       <%= form_with model: @patient_list, local: true do |f| %>
+         <% @patients.each do |patient| %>
+           <div class="patient">
+             <ul>
+               <li><%= f.check_box :list, {multiple: true}, patient.name, nil %><%= patient.name%></li> 
+             </ul>
+           </div>
+         <% end %>
+        <div class="checkup_content-submit">
+          <%= f.submit "確認する" , class:"btn" %>
+        </div>
+       <% end %>
+      </div>   
+   </div>
+</div>
