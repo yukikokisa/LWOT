@@ -57,8 +57,8 @@ I am a nurse.  Although it is said to be an angel in a white coat, it is a burde
 ### Association
 
 - belongs_to: nurse
-- belongs_to: patient_list
-- belongs_to: question
+- has_many: patient_list
+- has_one: question
 
 ## patient_lists テーブル
 
@@ -82,7 +82,7 @@ I am a nurse.  Although it is said to be an angel in a white coat, it is a burde
 
 ### Association
  
-- has_one: patient
+- belongs_to: patient
 - belongs_to: patient_list
 - has_one: symptoms
 - has_one: medical_treatment
@@ -99,7 +99,7 @@ I am a nurse.  Although it is said to be an angel in a white coat, it is a burde
 
 ### Association
  
-- has_one: question
+- belongs_to: question
 
 ## medical_treatments　テーブル
 
@@ -111,7 +111,7 @@ I am a nurse.  Although it is said to be an angel in a white coat, it is a burde
 
 ### Association
  
-- has_one: question
+- belongs_to: question
 
 ## checkups　テーブル
 
@@ -123,4 +123,4 @@ I am a nurse.  Although it is said to be an angel in a white coat, it is a burde
 
 ### Association
  
-- has_one: question
+- belongs_to: question
