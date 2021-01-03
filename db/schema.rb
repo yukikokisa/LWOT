@@ -82,9 +82,7 @@ ActiveRecord::Schema.define(version: 2021_01_02_023746) do
   end
 
   add_foreign_key "checkups", "patients"
-  add_foreign_key "medical_treatments", "patients"
+  add_foreign_key "medical_treatments"
   add_foreign_key "patient_lists", "nurses"
-  add_foreign_key "patient_lists", "patients"
-  add_foreign_key "questions", "patients"
-  add_foreign_key "symptoms", "patients"
+
 end
